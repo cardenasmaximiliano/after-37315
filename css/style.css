@@ -46,15 +46,16 @@ ul{
 
 
 main{
-    padding-bottom: 30px;
+   
     width: 100%;
-    height: 100vh;
+ 
 }
 
 /**banner**/
 .banner{
     background-image: url("../img/banner.jpg");
-    background-size: cover;
+    background-size:cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 500px;
     display: flex;
@@ -70,22 +71,58 @@ h1{
     font-size: 50px;
     
 }
+/* main**/
+h2,h3{
+    text-align: center;
+}
+/**section principal**/
+/**card*/
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    
+    margin: 20px;
+}
+.card figure{
+    display: flex;
+    justify-content: center;
+}
+
+/* gridss*/
 .container{
-    display: grid;
     width: 100%;
-    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.principal-txt{
+    width: 70%;
+    text-align: center;
+
+}
+.grid{
+    display: grid;
+    width: 75%;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr) ;
-    grid-template-areas:
+    grid-template-rows: 25% 25% 25% 25%;
+    justify-content: center;
+    grid-template-areas: 
     "principal principal principal principal"
-    "sec-1 sec-1 sec-2 sec-2"
-    "none  sec-3 sec-4 none"
-    "parrafito parrafito parrafito parrafito"
+    "sec-1      sec-1     sec-2      sec-2"
+    "sec-3       sec-3    sec-4      sec-4"
+    "parrafito  parrafito  parrafito  parrafito"
     ;
 }
 .principal{
+    
     grid-area: principal;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
 }
+
 .sec-1{
     grid-area: sec-1;
 }
@@ -100,5 +137,18 @@ h1{
 }
 .parrafito{
     grid-area: parrafito;
-    font-size: 20px;
+    padding: 25px 0px;
+}
+
+footer{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+}
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
 }
