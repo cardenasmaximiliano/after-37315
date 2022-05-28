@@ -19,11 +19,32 @@ li a{
     color: white;
     text-decoration: none;
 }
+li a:hover{
+    color: red;
+}
 header, footer{
     background-color: #0d0d0de8;
     color: white;
     padding-bottom: 20px;
 }
+/***maquetar header***/
+.logo{
+    display: flex;
+    justify-content: center;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
 main{
     padding-bottom: 30px;
 }
